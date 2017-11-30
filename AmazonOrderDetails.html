@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Order Details </title>
+    <script type="text/javascript" src="HTMLIntegratedJSON.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+    function getOrderIdEnteredByUser(elementId) {
+        var orderId = document.getElementById('orderId').value;
+        getOrderDetailsBasedOnOrderID(elementId, orderId);
+    }
+
+    function getEmailIdEnteredByUser(elementId) {
+        var emailId = document.getElementById('enterEmailID').value;
+        getOrderBasedOnEmailID(elementId, emailId);
+    }
+
+</script>
+<h3>Amazon Order Details</h3>
+<hr>
+<input type = "button" value = "Get all orders" onclick="getAllOrders('output')">
+<br>
+<p>Enter Order id: <input type = "textArea" id = "orderId" value =""> <input type = "button" value="Get Data" onclick="getOrderIdEnteredByUser('output')"</p>
+
+<p> Enter name:  <input type="textArea" id="enterEmailID" value = "">    <input type = "button" value="Get Data" onclick="getEmailIdEnteredByUser('output')" </p>
+<hr>
+<div id="output"></div>
+</body>
+</html>
+

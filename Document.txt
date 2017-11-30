@@ -1,0 +1,45 @@
+Assignment Title:
+
+
+Solution:
+---------
+
+In this project, I have created two files i.e
+1) AmazonOrderDetails.html
+2) HTMLIntegratedJson.js
+
+AmazonOrderDetails.html has three options corresponding to three assignment questions:
+1. Button to get all Amazon order details
+2. A text field to take input of specific order id, which acts as index and data from Order JSON is fetched
+3. A text field to take email id of customer, which is searched from Order JSON to fetch orders placed by the customer
+
+
+About JSON file:
+----------------
+In JSON file (amazonProductData), I have:
+
+Order details (array of JSON objects, each object indicating an order):
+    Order Id, Placed date, Tracking Id, Delivery executives, delivery executive phone number, Warehouse address, Total price, Payment mode
+Customer details (who placed the order):
+    Customer Id, Name, Address, Delivery Preference, Prime Status, Email, Phone number
+Product details (an Array of JSON objects):
+    Product Id, Product name, Price, Quantity ordered, weight, Product color
+Seller details associated with product sold for the order:
+    Seller Id, name, Address and seller rating
+
+
+Processing JSON:
+----------------
+
+I have defined three funcitions in .JS file corresponding to each question in assignment.
+
+1. getAllOrders(), reads the JSON data based on index and show as a output.
+2. (getOrderDetailsBasedOnOrderID()), takes the orderId as input and shows output based on the orderId.
+3. (getOrderBasedOnEmailID()), takes emailId as input and checks the emailId is present in which index and then shows order details based on index.
+
+Besides, I have also defined a common function with the name(printOrderDetailsByIndex()) that parses JSON order object and creates HTML ouput.
+It takes order index as a parameter and based on this index it traverse the output.
+
+try catch
+-----------
+IF the order Id and emailId doesn't match, it will handle exception and give message that order Id and email Id does not match.
